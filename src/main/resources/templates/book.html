@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserve Room</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <script defer src="/js/book.js"></script>
+</head>
+<body>
+<header class="nav-con">
+    <nav class="nav">
+        <div class="logo-con">
+                <span>
+                    HOTEL APP
+                </span>
+        </div>
+        <div class="drop-down-con">
+            <ul class="drop-down">
+                <li>
+                    <a class="reserve active" href="/available">Find and Reserve</a>
+                </li>
+                <li>
+                    <a class="anc" href="#">Reviews</a>
+                </li>
+                <li>
+                    <a class="anc" href="#">About</a>
+                </li>
+                <li>
+                    <a class="anc" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="icon-con">
+            <div class="icon">
+                <img class="avatar" src="/img/avatar.png" alt="image">
+            </div>
+            <span class="signin">Login or Sign up</span>
+        </div>
+    </nav>
+</header>
+<div id="msg" class="msg">
+
+</div>
+<main class="main-form">
+    <form action="/reserves" method="post" class="form">
+        <input id="roomno" name="roomno" type="hidden" th:value="${roomnumber}"/>
+        <div class="input-field">
+            <label for="checkin">
+                Check in:
+            </label>
+            <input id="checkin" name="checkin" class="text-field" type="date" required/>
+        </div>
+        <div class="input-field">
+            <label for="checkout">
+                Check in:
+            </label>
+            <input id="checkout" name="checkout" class="text-field" type="date" required/>
+        </div>
+        <div class="input-field">
+            <label for="firstname">
+                Firstname:
+            </label>
+            <input id="firstname" name="firstname" class="text-field" type="text" placeholder="First name" required/>
+        </div>
+        <div class="input-field">
+            <label for="lastname">
+                Lastname:
+            </label>
+            <input id="lastname" name="lastname" class="text-field" type="text" placeholder="Last name" required/>
+        </div>
+        <div class="input-field">
+            <label for="mobile">
+                Mobile:
+            </label>
+            <input id="mobile" name="mobile" class="text-field" type="number" placeholder="Phone Number" required/>
+        </div>
+        <div class="input-field">
+            <label for="email">
+                Email:
+            </label>
+            <input class="text-field" name="email" id="email" type="email" placeholder="Email" required/>
+        </div>
+
+        <button id="sub" class="sub">Reserve</button>
+
+    </form>
+</main>
+
+</body>
+</html>
