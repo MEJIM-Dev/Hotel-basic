@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <script defer src="/js/checkout.js"></script>
+</head>
+<body>
+<header class="nav-con">
+  <nav class="nav">
+    <div class="logo-con">
+                <span>
+                    HOTEL APP
+                </span>
+    </div>
+    <div class="drop-down-con">
+      <ul class="drop-down">
+        <li>
+          <a class="reserve active" href="/available">Find and Reserve</a>
+        </li>
+        <li>
+          <a class="anc" href="#">Reviews</a>
+        </li>
+        <li>
+          <a class="anc" href="#">About</a>
+        </li>
+        <li>
+          <a class="anc" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="icon-con">
+      <div class="icon">
+        <img class="avatar" src="/img/avatar.png" alt="image">
+      </div>
+      <span class="signin">Login or Sign up</span>
+    </div>
+  </nav>
+</header>
+<main>
+  <form action="http://localhost:8081/checkout" method="post">
+      <div>
+          <label for="reference">
+              ReferenceId:
+          </label>
+          <input id="reference" name="reference" type="text" placeholder="Enter reference number"/>
+      </div>
+      <input id="sub" type="submit" />
+  </form>
+</main>
+
+</body>
+</html>

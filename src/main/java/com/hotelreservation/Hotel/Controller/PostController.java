@@ -46,6 +46,11 @@ public class PostController {
         return roomService.findRoom();
     }
 
+    @PostMapping("api/checkout")
+    public  ResponseEntity<?> checkout(@RequestBody String reference){
+        return reservationService.cancelReservation(reference);
+    }
+
 }
 
 

@@ -5,6 +5,7 @@ import com.hotelreservation.Hotel.Model.Room;
 import com.hotelreservation.Hotel.Service.ReservationService;
 import com.hotelreservation.Hotel.Service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,6 +35,11 @@ public class GetController {
     public String reserveForm(@RequestParam("room") int roomNo, Model model){
         model.addAttribute("roomnumber", roomNo);
         return "book";
+    }
+
+    @GetMapping("/checkout")
+    public String logoutForm(){
+        return "checkout";
     }
 
 }
